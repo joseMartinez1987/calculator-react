@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "default": "cal-app-color",
+    "react-calculator": "cal-app-color"
+  }
+}
