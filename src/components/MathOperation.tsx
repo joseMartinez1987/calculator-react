@@ -1,8 +1,17 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Button from './Button'
+import React, {FC} from 'react'
 
-const MathOperations = ({onClickOperation,onClickEqual}) => (
+import Button, {ButtonClickHandle} from './Button'
+
+
+
+
+type Props = {
+    onClickOperation:ButtonClickHandle,
+    onClickEqual: ButtonClickHandle
+
+}
+
+const MathOperations: FC<Props> = ({onClickOperation,onClickEqual}) => (
     <section className="math-operations">
         <Button text="+" clickHandler={onClickOperation} />
         <Button text="-" clickHandler={onClickOperation} />
@@ -12,10 +21,6 @@ const MathOperations = ({onClickOperation,onClickEqual}) => (
     </section>
 )
 
-MathOperations.propTypes = {
-    onClickOperation: PropTypes.func.isRequired,
-    onClickEqual: PropTypes.func.isRequired
-}
 
 export default MathOperations
 
